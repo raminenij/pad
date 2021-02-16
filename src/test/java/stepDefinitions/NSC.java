@@ -1,5 +1,6 @@
 package stepDefinitions;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -20,9 +21,11 @@ public class NSC {
 		public void go_to_national_student_clearinghouse_home_page() {
 			System.setProperty("webdriver.chrome.driver", "C:\\dri\\chromedriver.exe");
 			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			//driver.manage().timeouts().SetScriptTimeout(TimeSpan.FromSeconds(4));
 			driver.get("https://www.studentclearinghouse.org/students/");
 			driver.manage().window().maximize();
-		    
+				    
 		}
 		
 		@Then("click on Students dropdown menu")
@@ -40,9 +43,11 @@ public class NSC {
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         	
+        	
+        		
         	Thread.sleep(1000);
-        	 	
-        driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
+        //driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
+        driver.findElement(By.xpath("//*[@id=\"nsc-form-field-autocomplete\"]")).sendKeys("Galen College of Nursing");
         driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys(Keys.TAB);
        
         Actions act =new Actions(driver);
