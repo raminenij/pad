@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions;
 		plugin= {"pretty" ,"html:test-output.html"},
 			//	plugin={"com.cucumber.listener.ExtentCucumberFormatter:"},
 		monochrome=true,
-		tags="@NSC1"
+		tags="@login"
 		)
 
 
