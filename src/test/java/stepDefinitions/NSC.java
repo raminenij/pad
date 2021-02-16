@@ -42,13 +42,13 @@ public class NSC {
 		public void select_a_college() throws Exception {
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        	
-        	
+               	
         		
-        	Thread.sleep(1000);
-        //driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
-        driver.findElement(By.xpath("//*[@id=\"nsc-form-field-autocomplete\"]")).sendKeys("Galen College of Nursing");
-        driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys(Keys.TAB);
+        	Thread.sleep(3000);
+        	
+       // driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
+        driver.findElement(By.xpath("//*[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
+        driver.findElement(By.xpath("//*[@id='nsc-form-field-autocomplete']")).sendKeys(Keys.TAB);
        
         Actions act =new Actions(driver);
         act.sendKeys(Keys.TAB).build().perform();
