@@ -44,7 +44,7 @@ public class NSC {
         driver.switchTo().window(tabs.get(1));
                	
         		
-        	Thread.sleep(3000);
+        	Thread.sleep(1000);
         	
        // driver.findElement(By.xpath("//input[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
         driver.findElement(By.xpath("//*[@id='nsc-form-field-autocomplete']")).sendKeys("Galen College of Nursing");
