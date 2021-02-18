@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
+@SuppressWarnings("unused")
 public class login {
 	public  WebDriver driver;
 	//public TestActions ta; 
